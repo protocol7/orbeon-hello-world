@@ -1,0 +1,20 @@
+<html xmlns:xforms="http://www.w3.org/2002/xforms" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>XForms Hello</title>
+		<xforms:model>
+			<xforms:instance>
+				<first-name  xmlns=""/>
+			</xforms:instance>
+		</xforms:model>
+	</head>
+	<body>
+		<p>
+			<xforms:input ref="/first-name"  incremental="true">
+				<xforms:label>Please enter your first name:</xforms:label>
+			</xforms:input>
+		</p>
+		<p>
+			<xforms:output value="if (normalize-space(/first-name) = '') then '' else concat('Hello, ', /first-name, '!')"/>
+		</p>
+	</body>
+</html>
